@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="#" />  
+    <title>Tutorial DataTables</title>
+      
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- CSS personalizado --> 
+    <link rel="stylesheet" href="main.css">  
+      
+    <!--datables CSS básico-->
+    <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
+    <!--datables estilo bootstrap 4 CSS-->  
+    <link rel="stylesheet"  type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+           
+    <!--font awesome con CDN-->  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">  
+      
+  </head>
+    
+  <body> 
+                            <!-- hhh -->
+                            <div id="mensaje"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-5">
+          <div class="card">
+            <div class="card-header">USUARIOS</div>
+            <div class="card-body">
+              <form action="" method="post">
+                <div class="mb-3">
+                  <label for="txtID" class="form-label">ID</label>
+                  <input
+                    type="textID"
+                    class="form-control"
+                    name="txtID"
+                    id="txtID"
+                    aria-describedby="helpId"
+                    placeholder="ID"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="txtNombre" class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="txtNombre"
+                    id="txtNombre"
+                    aria-describedby="helpId"
+                    placeholder="Nombre"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="txtPrecio" class="form-label">Precio</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="txtPrecio"
+                    id="txtPrecio"
+                    aria-describedby="helpId"
+                    placeholder=""
+                  />
+                </div>
+                <div class="btn-group" role="group" aria-label="">
+                  <button id="btnAgregar" type="button" class="btn btn-success">
+                    Agregar
+                  </button>
+                  <button
+                    id="btnEditar"
+                    type="button"
+                    onclick="editar()"
+                    class="btn btn-warning"
+                  >
+                    Editar
+                  </button>
+                  <button
+                    id="btnCancelar"
+                    type="button"
+                    class="btn btn-primary"
+                  >
+                    Cancelar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-7">
+          <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>PRECIO</th>
+                <th>ACCIONES</th>
+              </tr>
+            </thead>
+            <tbody id="example">
+              <tr>
+                <td>1</td>
+                <td>Mochila</td>
+                <td>300</td>
+                <td>Seleccionar | Borrar</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+     
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script src="popper/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+      
+    <!-- datatables JS -->
+    <script type="text/javascript" src="datatables/datatables.min.js"></script>    
+     
+    <!-- para usar botones en datatables JS -->  
+    <script src="datatables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>  
+    <script src="datatables/JSZip-2.5.0/jszip.min.js"></script>    
+    <script src="datatables/pdfmake-0.1.36/pdfmake.min.js"></script>    
+    <script src="datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
+    <script src="datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
+     
+    <!-- código JS propìo-->    
+    <script type="text/javascript" src="main.js"></script>  
+    
+    
+  </body>
+</html>
